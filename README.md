@@ -12,8 +12,8 @@ This is a casenote script file containing model training and testing using LEGAL
 
 ## How to run this? 
 First add a data.csv file under data/ folder, then a test run is as simple as 
-```python3
-tfBertClf.py
+```
+python3 tfBertClf.py
 ```
 
 

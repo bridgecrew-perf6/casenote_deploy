@@ -6,6 +6,7 @@ This is a casenote script file containing model training and testing using LEGAL
 * The most critical dependency is HuggingFace, python3
 
 ## Interface for input 
+During development, the only input file needed is a csv file containing: 
 * col1: Sentence 
 * col2-n: the six label categories of the sentence 
 

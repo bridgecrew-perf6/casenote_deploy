@@ -18,7 +18,7 @@ from sklearn.metrics import f1_score
 useLabel = 'Multi6' # Multi6
 
 # input is sentence by sentence, therefore there needs to be pre-tokenized into sentences 
-Corpus = pd.read_csv('data/cleanedAllSenten_liwc.csv', encoding='latin-1')
+Corpus = pd.read_csv('data/cleanedAllSenten.csv', encoding='latin-1')
 
 if useLabel == 'Multi6':
     labelCol = Corpus['Material'].astype(str) + Corpus['Procedural'].astype(str) + Corpus['CourtR'].astype(str) + Corpus['Title'].astype(str) + Corpus['CourtD'].astype(str) + Corpus['Footnotes'].astype(str)

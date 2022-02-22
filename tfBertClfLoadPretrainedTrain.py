@@ -33,12 +33,10 @@ training_args = TrainingArguments(
     logging_steps=10
 )
 
-# @todo depending on the previous user marked error labelling saved in DB 
+# @todo depending on the previous user marked error labelling saved in DB, maybe retrieve as csv containing text and label column
 useLabel = 'Multi6'
 FileName = 'data/cleanedAllSenten_liwc.csv'
 Corpus = pd.read_csv(FileName, encoding='latin-1')
-
-# use retrieved casenote text array and label array for training
 TextArr = Corpus['Content']
 if useLabel == 'Multi6':
     labelCol = Corpus['Material'].astype(str) + Corpus['Procedural'].astype(str) + Corpus['CourtR'].astype(str) + Corpus['Title'].astype(str) + Corpus['CourtD'].astype(str) + Corpus['Footnotes'].astype(str)

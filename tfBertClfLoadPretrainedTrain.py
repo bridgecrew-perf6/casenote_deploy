@@ -18,10 +18,8 @@ from sklearn.metrics import f1_score
 # legal bert tokenizer
 tokenizer = AutoTokenizer.from_pretrained("nlpaueb/legal-bert-base-uncased")
 
-# @todo change to the current model directory
+# @todo change to the current and new model directory
 model = AutoModelForSequenceClassification.from_pretrained("test_trainer_multisix", local_files_only=True, num_labels=6)
-
-# @todo change to the new model directory
 training_args = TrainingArguments(
     output_dir='test_trainer_multisix_retrained',          # output directory
     num_train_epochs=1,              # total number of training epochs
